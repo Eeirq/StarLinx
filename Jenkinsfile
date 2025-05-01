@@ -8,19 +8,19 @@
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t <eelysa>/starlinx .'
+                sh 'docker build -t eelysa/starlinx .'
             }
         }
         stage('Push to Docker Hub') {
             steps {
                 withDockerRegistry([credentialsId: 'docker-hub-credentials', url: '']) {
-                    sh 'docker push <your-dockerhub-username>/starlinx'
+                    sh 'docker push eelysa/starlinx'
                 }
             }
         }
         stage('Deploy Application') {
             steps {
-                sh 'docker run -d -p 80:80 --name starlinx <your-dockerhub-username>/starlinx'
+                sh 'docker run -d -p 80:80 --name starlinx eelysa/starlinx'
             }
         }
     }
