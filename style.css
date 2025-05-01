@@ -1,0 +1,55 @@
+body {
+    background-color: #fbeaff; /* Soft pastel background */
+    font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    color: #ff7eb3; /* Soft pink */
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #ffd3e3;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+button {
+    background-color: #ffcad4; /* Cute pink shade */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff92a8; /* Slightly deeper pink */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+@keyframes twinkle {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Gold */
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite ease-in-out;
+} 
