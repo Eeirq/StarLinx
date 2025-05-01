@@ -1,4 +1,4 @@
- # Use Nginx as the base image
+# Use Nginx as the base image
 FROM nginx:latest
 
 # Copy your web application files into the container
@@ -9,4 +9,3 @@ EXPOSE 80
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
-
