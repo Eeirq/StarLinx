@@ -8,7 +8,7 @@
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t <your-dockerhub-username>/starlinx .'
+                sh 'docker build -t <eelysa>/starlinx .'
             }
         }
         stage('Push to Docker Hub') {
