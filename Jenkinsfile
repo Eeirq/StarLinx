@@ -20,7 +20,7 @@
 }
         stage('Deploy Application') {
     steps {
-        sh 'docker run -d -p 80:80 --name starlinx_v2 eelysa/starlinx'
+        sh 'docker run -d -p 80:80 --name starlinx eelysa/starlinx'
     }
 }
 
