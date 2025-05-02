@@ -12,12 +12,12 @@
             }
         }
         stage('Push to Docker Hub') {
-            steps {
-                withDockerRegistry([credentialsId: 'eelysa', url: '']) {
-                    sh 'docker push eelysa/starlinx'
-                }
-            }
+    steps {
+        withDockerRegistry([credentialsId: 'dockerhub-credentials', url: 'https://index.docker.io/v1/']) {
+            sh 'docker push eelysa/starlinx'
         }
+    }
+}
         stage('Deploy Application') {
             steps {
                 sh 'docker run -d -p 80:80 --name starlinx eelysa/starlinx'
